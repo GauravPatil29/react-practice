@@ -1,0 +1,18 @@
+// colors
+$color-primary: #e76f51;
+$color-secondary: #2a9d8f;
+$color-background: #f1dfb1;
+
+// Generated primary colors
+$color-primary-text: #ffffff;
+$color-primary-border: darken($color-primary, 20%);
+$color-primary-background: $color-primary;
+$color-primary-hover-background: darken($color-primary, 20%);
+$color-primary-active-background: darken($color-primary, 20%);
+
+// Generated secondary colors
+$color-secondary-text: #ffffff;
+$color-secondary-border: darken($color-secondary, 20%);
+$color-secondary-background: $color-secondary;
+$color-secondary-hover-background: darken($color-secondary, 20%);
+$color-secondary-active-background: darken($color-secondary, 20%);

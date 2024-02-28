@@ -1,0 +1,81 @@
+@import '/src/index.scss';
+
+.button {
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button {
+    &--small {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    &--medium {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    &--large {
+        font-size: 20px;
+        padding: 10px 16px;
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+.button--primary {
+    color: $color-primary-text;
+    border-color: $color-primary-border;
+    background-color: $color-primary-background;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-primary-text;
+        border-color: $color-primary-border;
+        background-color: $color-primary-hover-background;
+    }
+}
+
+.button--secondary {
+    color: $color-secondary-text;
+    border-color: $color-secondary-border;
+    background-color: $color-secondary-background;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-secondary-text;
+        border-color: $color-secondary-border;
+        background-color: $color-secondary-hover-background;
+    }
+}

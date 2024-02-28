@@ -1,0 +1,25 @@
+@import './styles/colors.scss';
+
+body {
+    background-color: $color-background;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.row {
+    @extend .flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.col {
+    @extend .flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}

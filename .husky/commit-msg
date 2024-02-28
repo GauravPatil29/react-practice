@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '[Policy] Validating commit message'
+
+if ! grep -qE "^([A-Z]+-[0-9]+|Merge|Feature)" "$1"; then
+    echo '[Policy ERROR] Your commit message must BEGIN WITH either a JIRA Issue "REACT-####", "Merge", or "Feature"'
+    exit 1
+fi

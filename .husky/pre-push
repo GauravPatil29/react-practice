@@ -1,0 +1,15 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '[Policy] Passing unit tests are required to push. Running now...'
+error=0
+NODE_ENV=development
+echo 'Running unit tests'
+CI=true npm test --watchAll=false || error=1
+
+if [ $error -ne 0 ]; then
+    echo '[Policy ERROR] Unit test(s) failed. Please fix before pushing.'
+    exit 1
+fi
+
+echo '[Policy] Unit tests passed. Pushing...'
